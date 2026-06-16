@@ -42,6 +42,9 @@ public class CardDragXR : MonoBehaviour
     private bool isHovered = false;
     public static CardDragXR currentHeldCard = null;
 
+    public static event System.Action OnUnitCardHeld;
+    public static event System.Action OnUnitCardReleased;
+
     private Coroutine pickupRoutine;
 
     private XRGrabInteractable grab;
@@ -123,6 +126,9 @@ public class CardDragXR : MonoBehaviour
 
         transform.SetParent(null, true);
 
+        if (data != null && data.IsUnit())
+            OnUnitCardHeld?.Invoke();
+
         if (pickupRoutine != null)
             StopCoroutine(pickupRoutine);
         pickupRoutine = StartCoroutine(PickupAnimation());
@@ -169,6 +175,8 @@ public class CardDragXR : MonoBehaviour
 
         isHeld = false;
         currentHeldCard = null;
+
+        OnUnitCardReleased?.Invoke();
 
         if (summonCircleInstance != null)
             summonCircleInstance.SetActive(false);

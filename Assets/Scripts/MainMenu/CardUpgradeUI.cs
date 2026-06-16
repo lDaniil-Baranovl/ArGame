@@ -13,6 +13,13 @@ public class CardUpgradeUI : MonoBehaviour
 
     private Coroutine feedbackCoroutine;
 
+    private void Awake()
+    {
+        // Авто-поиск текста среди дочерних объектов если не назначен вручную
+        if (textUI == null)
+            textUI = GetComponentInChildren<TextMeshProUGUI>();
+    }
+
     private void Start()
     {
         UpdateUI();

@@ -8,6 +8,8 @@ public class CardUpgradeUI : MonoBehaviour
     public int upgradeCost = 100;
 
     public TextMeshProUGUI textUI;
+    [Tooltip("Размер шрифта. Уменьши если текст не помещается в кнопку.")]
+    public float fontSize = 8f;
 
     private Coroutine feedbackCoroutine;
 
@@ -35,7 +37,8 @@ public class CardUpgradeUI : MonoBehaviour
     public void UpdateUI()
     {
         var data = CardUpgradeManager.Instance.GetCard(unit);
-        textUI.text = $"Ур.{data.level} {data.fragments}/10\nУлучшить: {upgradeCost}";
+        textUI.fontSize = fontSize;
+        textUI.text = $"Lv.{data.level} {data.fragments}/10";
     }
 
     public void TryUpgrade()

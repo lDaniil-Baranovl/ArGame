@@ -24690,10 +24690,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f4a10a6fd47e214b9711df0e2fc82b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerTick: 15
+  damagePerTick: 80
   tickRate: 1
   firstHitDelay: 1
-  teamID: 1
+  teamID: 0
   meteorSound: {fileID: 8300000, guid: 07d86f38d24ec394398898718fd5e4fb, type: 3}
   baseInterval: 0.3
   randomOffset: 0.15

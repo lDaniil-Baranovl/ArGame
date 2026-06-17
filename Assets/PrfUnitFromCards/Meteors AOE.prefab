@@ -1,4 +1,4 @@
-%YAML 1.1
+﻿%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &458340795439301633
 GameObject:
@@ -29590,7 +29590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f4a10a6fd47e214b9711df0e2fc82b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerTick: 15
+  damagePerTick: 80
   tickRate: 1
   firstHitDelay: 1
   teamID: 1

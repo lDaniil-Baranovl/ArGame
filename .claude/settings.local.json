@@ -31,7 +31,8 @@
       "Bash(grep -iE '\\\\.\\(shader|shadergraph|cginc|hlsl|compute\\)$')",
       "Bash(xargs grep -l \"Extend\\\\|extend\")",
       "Bash(xargs grep -l \"Spell\\\\|spell\")",
-      "Bash(xargs grep -l \"Panel\\\\|panel\\\\|Shop\\\\|shop\")"
+      "Bash(xargs grep -l \"Panel\\\\|panel\\\\|Shop\\\\|shop\")",
+      "Bash(xargs grep -l \"SkullsInSombreros\\\\|Cowboy\\\\|Skull\")"
     ],
     "deny": [],
     "ask": [],

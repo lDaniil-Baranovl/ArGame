@@ -1,4 +1,4 @@
-%YAML 1.1
+﻿%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &1842530952934078
 GameObject:
@@ -10041,7 +10041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce62dff0bdf0d0b47bcad0cf8c6e1957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 25
+  damageAmount: 65
   teamID: 1
 --- !u!1 &1213002604405452106
 GameObject:
@@ -15391,7 +15391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3069fdfe482b77e438feaa9538fab4f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 350
   CurrentHealth: 0
   stateManager: {fileID: 2210072281449278209}
   teamID: 1

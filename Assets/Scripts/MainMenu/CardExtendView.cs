@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 [RequireComponent(typeof(Graphic))]
 public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -31,6 +32,12 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public float expandDuration   = 0.25f;
     public float moveDuration     = 0.30f;
 
+    [Header("Видео превью карты")]
+    [Tooltip("VideoPlayer на объекте карты")]
+    public VideoPlayer cardVideoPlayer;
+    [Tooltip("RawImage дочерний объект VideoPreview — скрыт по умолчанию")]
+    public RawImage videoPreview;
+
     [Header("Оверлей ShopPanel")]
     [Tooltip("Image компонент объекта DimOverlay")]
     public Image dimOverlay;
@@ -46,14 +53,17 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     )]
     public Material blurMaterial;
 
+    // ── глобальная блокировка: пока открыта одна карта — другие не реагируют ──
+    private static CardExtendView currentExtended;
+
     // ── состояние ──────────────────────────────────────────────────────────
     private bool isHovered;
     private bool isExtended;
     private bool isAnimating;
 
     private Sprite     frontSprite;
-    private Vector3    savedWorldPos;
-    private Quaternion savedWorldRot;
+    private Vector3    savedLocalPos;
+    private Quaternion savedLocalRot;
     private Vector3    savedLocalScale;
     private Vector3    savedButtonScale;
 
@@ -103,7 +113,7 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         if (isAnimating) return;
         if (!flipAction.action.WasPressedThisFrame()) return;
 
-        if (!isExtended && isHovered)
+        if (!isExtended && isHovered && currentExtended == null)
             StartCoroutine(ExtendRoutine());
         else if (isExtended)
             StartCoroutine(ReturnRoutine());
@@ -112,19 +122,30 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData _) => isHovered = true;
     public void OnPointerExit(PointerEventData _)  => isHovered = false;
 
+    private void OnDisable()
+    {
+        if (currentExtended == this) currentExtended = null;
+    }
+
     // ── главные корутины ───────────────────────────────────────────────────
     private IEnumerator ExtendRoutine()
     {
         isAnimating = true;
 
-        savedWorldPos   = transform.position;
-        savedWorldRot   = transform.rotation;
+        savedLocalPos   = transform.localPosition;
+        savedLocalRot   = transform.localRotation;
         savedLocalScale = transform.localScale;
 
         yield return AnimateScaleX(0f, collapseDuration);
 
         if (targetImage != null && infoSprite != null)
             targetImage.sprite = infoSprite;
+
+        if (cardVideoPlayer != null && videoPreview != null)
+        {
+            videoPreview.gameObject.SetActive(true);
+            cardVideoPlayer.Play();
+        }
 
         EnableCanvasOverride();
 
@@ -148,6 +169,7 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         // Разрешаем нажать кнопку улучшения только когда карта полностью раскрыта
         if (upgradeBtn != null) upgradeBtn.interactable = true;
 
+        currentExtended = this;
         isExtended  = true;
         isAnimating = false;
     }
@@ -164,10 +186,22 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         yield return AnimateScaleX(0f, collapseDuration);
 
+        if (cardVideoPlayer != null && videoPreview != null)
+        {
+            cardVideoPlayer.Stop();
+            videoPreview.gameObject.SetActive(false);
+        }
+
         if (targetImage != null && frontSprite != null)
             targetImage.sprite = frontSprite;
 
-        yield return MoveTowards(savedWorldPos, savedWorldRot, moveDuration);
+        Transform parent = transform.parent;
+        Vector3    returnPos = parent != null ? parent.TransformPoint(savedLocalPos)  : savedLocalPos;
+        Quaternion returnRot = parent != null ? parent.rotation * savedLocalRot        : savedLocalRot;
+        yield return MoveTowards(returnPos, returnRot, moveDuration);
+        // Snap к локальной позиции, чтобы скролл во время анимации не оставил сдвига
+        transform.localPosition = savedLocalPos;
+        transform.localRotation = savedLocalRot;
 
         // Возвращаем оригинальный масштаб кнопки
         if (upgradeButton != null)
@@ -177,6 +211,7 @@ public class CardExtendView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         yield return AnimateScaleXTo(savedLocalScale, expandDuration);
 
+        currentExtended = null;
         isExtended  = false;
         isAnimating = false;
     }

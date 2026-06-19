@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &1842530952934078
 GameObject:
@@ -10027,8 +10027,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 2.4867573, y: 2.5243716, z: 2.0209167}
-  m_Center: {x: 0.011260731, y: 0.762186, z: -0.14023781}
+  m_Size: {x: 2.4867573, y: 2.5243716, z: 2.4451513}
+  m_Center: {x: 0.011260693, y: 0.762186, z: -0.9608758}
 --- !u!114 &816270602636153101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15313,7 +15313,7 @@ Transform:
   m_GameObject: {fileID: 1993341412219393486}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.176665, y: -5.1517053, z: 6.573803}
+  m_LocalPosition: {x: -1.3186643, y: 2.275, z: -4.2383847}
   m_LocalScale: {x: 0.39, y: 0.39, z: 0.39}
   m_ConstrainProportionsScale: 1
   m_Children:

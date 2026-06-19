@@ -76,10 +76,33 @@ public class StateManagerFlyColdDragon : UnitStateManager
         }
         else
         {
+            if (target != null && attackEffect != null)
+            {
+                Vector3 hitPos = target.position;
+                if (TryGetGroundHeight(hitPos, out float groundHeight))
+                    hitPos.y = groundHeight;
+
+                attackEffect.transform.position = hitPos;
+            }
+
             damageCollider.enabled = true;
             attackEffect.SetActive(true);
             isAttackEffectActive = true;
         }
+    }
+
+    // Высота поля боя под заданной XZ-позицией, чтобы эффект атаки всегда бил по земле
+    private bool TryGetGroundHeight(Vector3 position, out float groundHeight)
+    {
+        Vector3 rayStart = new Vector3(position.x, position.y + 50f, position.z);
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, 100f, LayerMask.GetMask("BattleField")))
+        {
+            groundHeight = hit.point.y;
+            return true;
+        }
+
+        groundHeight = position.y;
+        return false;
     }
     public void FLCAnimationEvent_ResetDamage()
     {

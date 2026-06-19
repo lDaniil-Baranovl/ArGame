@@ -33,7 +33,11 @@
       "Bash(xargs grep -l \"Spell\\\\|spell\")",
       "Bash(xargs grep -l \"Panel\\\\|panel\\\\|Shop\\\\|shop\")",
       "Bash(xargs grep -l \"SkullsInSombreros\\\\|Cowboy\\\\|Skull\")",
-      "Bash(xargs grep -l \"Volume\")"
+      "Bash(xargs grep -l \"Volume\")",
+      "Bash(xargs grep -l \"db3488de871721d4f83250ff2af716b7\")",
+      "Bash(xargs grep -l \"96d60590d2a3f0143a9a84d4568d9de8\")",
+      "Bash(openssl rand *)",
+      "Bash(awk '{print strtonum\\(\"0x\"$0\\) % 9000000000000000000 + 100000000000000000}')"
     ],
     "deny": [],
     "ask": [],

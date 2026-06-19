@@ -19630,7 +19630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ac6a87a7aae014db3ed34c5e3af782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 300
+  damage: 450
   delay: 1.15
   teamID: 0
   castSound: {fileID: 8300000, guid: 1c807b6ba8fb9544d9c02bf47d9ce979, type: 3}

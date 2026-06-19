@@ -1307,7 +1307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &114493624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2307,8 +2307,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 353276175}
+  videoPreview: {fileID: 353276176}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18
@@ -2492,8 +2492,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 655781961}
+  videoPreview: {fileID: 655781962}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18
@@ -4772,8 +4772,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 894063618}
+  videoPreview: {fileID: 894063619}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18
@@ -10550,8 +10550,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 1302793607}
+  videoPreview: {fileID: 1302793608}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18
@@ -11111,8 +11111,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 96322133}
+  videoPreview: {fileID: 96322134}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18
@@ -12125,8 +12125,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 1891136678}
+  videoPreview: {fileID: 1891136679}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18
@@ -12385,8 +12385,8 @@ MonoBehaviour:
   collapseDuration: 0.2
   expandDuration: 0.25
   moveDuration: 0.3
-  cardVideoPlayer: {fileID: 0}
-  videoPreview: {fileID: 0}
+  cardVideoPlayer: {fileID: 114493625}
+  videoPreview: {fileID: 114493626}
   dimOverlay: {fileID: 1920952793}
   dimTargetAlpha: 0.815
   dimFadeDuration: 0.18

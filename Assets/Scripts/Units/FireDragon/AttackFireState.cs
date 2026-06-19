@@ -29,11 +29,17 @@ public class AttackFireState : UnitBaseState<StateManagerFireDragon>
 
         if (manager.target == null || Vector3.Distance(manager.transform.position, manager.target.position) > manager.attackDistance + 1f)
         {
-            manager.SwitchState(manager.fireDrgRunState);
-            return;
+            Transform newTarget = manager.GetTarget();
+            manager.target = newTarget;
+
+            if (newTarget == null || !manager.HasReachedTarget())
+            {
+                manager.SwitchState(manager.fireDrgRunState);
+                return;
+            }
         }
         Vector3 direction = (manager.target.position - manager.transform.position).normalized;
-        direction.y = 0; // чтобы не наклонялся вверх/вниз
+        direction.y = 0; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅ
 
         if (direction != Vector3.zero)
         {

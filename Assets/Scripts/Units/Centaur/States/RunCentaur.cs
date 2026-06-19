@@ -13,7 +13,7 @@ public class RunCentaurState : UnitBaseState<CentaurStateManager>
         manager.centaur_runTime = 0f;
        
         manager.SetSpeed(manager.walkSpeed);
-        manager.navMeshAgent.isStopped = false;
+        manager.navMeshAgent.isStopped = true;
         manager.unitAnimator.SetBool("IsRunningCentaur", false);
         manager.unitAnimator.SetBool("IsAttackingCentaur", false);
     }
@@ -39,8 +39,9 @@ public class RunCentaurState : UnitBaseState<CentaurStateManager>
                 if (target != null)
                 {
                     manager.target = target;
-                    manager.SetDestination(target);
                     manager.unitAnimator.SetBool("IsRunningCentaur", true);
+                    manager.navMeshAgent.isStopped = false;
+                    manager.SetDestination(target);
                 }
             }
             return;
@@ -53,6 +54,8 @@ public class RunCentaurState : UnitBaseState<CentaurStateManager>
         if (newTarget != null)
         {
             manager.target = newTarget;
+            manager.unitAnimator.SetBool("IsRunningCentaur", true);
+            manager.navMeshAgent.isStopped = false;
 
             Vector3 targetPos = manager.GetAttackPosition(newTarget);
             manager.navMeshAgent.SetDestination(targetPos);

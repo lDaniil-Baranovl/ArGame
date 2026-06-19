@@ -32,7 +32,8 @@
       "Bash(xargs grep -l \"Extend\\\\|extend\")",
       "Bash(xargs grep -l \"Spell\\\\|spell\")",
       "Bash(xargs grep -l \"Panel\\\\|panel\\\\|Shop\\\\|shop\")",
-      "Bash(xargs grep -l \"SkullsInSombreros\\\\|Cowboy\\\\|Skull\")"
+      "Bash(xargs grep -l \"SkullsInSombreros\\\\|Cowboy\\\\|Skull\")",
+      "Bash(xargs grep -l \"Volume\")"
     ],
     "deny": [],
     "ask": [],

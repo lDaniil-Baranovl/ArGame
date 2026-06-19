@@ -12,7 +12,7 @@ public class SkeletRunSt : UnitBaseState<SkeletStMan>
         hasStartedRunning = false;
 
         manager.SetSpeed(manager.walkSpeed);
-        manager.navMeshAgent.isStopped = false;
+        manager.navMeshAgent.isStopped = true;
         manager.unitAnimator.SetBool("IsRunning", false);
         manager.unitAnimator.SetBool("IsAttacking", false);
     }
@@ -38,8 +38,9 @@ public class SkeletRunSt : UnitBaseState<SkeletStMan>
                 if (target != null)
                 {
                     manager.target = target;
-                    manager.SetDestination(target);
                     manager.unitAnimator.SetBool("IsRunning", true);
+                    manager.navMeshAgent.isStopped = false;
+                    manager.SetDestination(target);
                 }
             }
             return;
@@ -50,6 +51,8 @@ public class SkeletRunSt : UnitBaseState<SkeletStMan>
         if (newTarget != null)
         {
             manager.target = newTarget;
+            manager.unitAnimator.SetBool("IsRunning", true);
+            manager.navMeshAgent.isStopped = false;
 
             Vector3 targetPos = manager.GetAttackPosition(newTarget);
             manager.navMeshAgent.SetDestination(targetPos);

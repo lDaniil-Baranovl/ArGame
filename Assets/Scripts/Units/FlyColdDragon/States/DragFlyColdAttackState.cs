@@ -25,8 +25,14 @@ public class DragFlyColdAttackState : UnitBaseState<StateManagerFlyColdDragon>
 
         if (manager.target == null || Vector3.Distance(manager.transform.position, manager.target.position) > manager.attackDistance + 1f)
         {
-            manager.SwitchState(manager.dragFlyColdRunState);
-            return;
+            Transform newTarget = manager.GetTarget();
+            manager.target = newTarget;
+
+            if (newTarget == null || !manager.HasReachedTarget())
+            {
+                manager.SwitchState(manager.dragFlyColdRunState);
+                return;
+            }
         }
         Vector3 direction = (manager.target.position - manager.transform.position).normalized;
         direction.y = 0; // ����� �� ���������� �����/����

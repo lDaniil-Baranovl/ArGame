@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class LaserAOE : MonoBehaviour
 {
-    [Header("Percent Damage Per Wave (sum must be 80)")]
-    [Range(0, 100)] public float wave1Percent = 10f;
-    [Range(0, 100)] public float wave2Percent = 15f;
-    [Range(0, 100)] public float wave3Percent = 15f;
-    [Range(0, 100)] public float wave4Percent = 20f;
-    [Range(0, 100)] public float wave5Percent = 20f;
+    [Header("Percent Damage Per Wave (sum must be 100)")]
+    [Range(0, 100)] public float wave1Percent = 30f;
+    [Range(0, 100)] public float wave2Percent = 25f;
+    [Range(0, 100)] public float wave3Percent = 20f;
+    [Range(0, 100)] public float wave4Percent = 15f;
+    [Range(0, 100)] public float wave5Percent = 10f;
 
-    [SerializeField] private float waveInterval = 1.5f;
+    [SerializeField] private float waveInterval = 1.2f;
 
     [Header("Who take damage")]
     [SerializeField] private int teamID = 0;

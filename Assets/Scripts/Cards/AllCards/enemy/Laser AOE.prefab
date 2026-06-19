@@ -34312,14 +34312,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdcbc959492397448101b457c40f317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave1Percent: 10
-  wave2Percent: 15
-  wave3Percent: 15
-  wave4Percent: 20
-  wave5Percent: 20
-  waveInterval: 3
-  teamID: 1
-  waveActiveTime: 3.5
+  wave1Percent: 30
+  wave2Percent: 25
+  wave3Percent: 20
+  wave4Percent: 15
+  wave5Percent: 10
+  waveInterval: 1.2
+  teamID: 0
+  waveActiveTime: 1.4
   waveFadeTime: 0.55
   LAZERSound: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   baseInterval: 0.3

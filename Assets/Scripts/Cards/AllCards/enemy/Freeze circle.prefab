@@ -4932,7 +4932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 6
-  teamID: 1
+  teamID: 0
   freezeEffectPrefab: {fileID: 2987157662048816286, guid: 5e96000aa763fc44ebeae159fef81af2, type: 3}
   freezeSound: {fileID: 8300000, guid: 11aa4c12354220a4190f1d6496b99782, type: 3}
   loopStartTime: 0.4

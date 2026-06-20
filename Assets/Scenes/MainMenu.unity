@@ -1275,7 +1275,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: 64e3120e6ee00924caf6f38f79004832, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 886604356}
@@ -2299,7 +2299,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: bd76587acf2a66b4b8bb184a7b7acae0, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 226040635}
@@ -2484,7 +2484,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: efcc0904b7c0bf1479bb780a9a3ec3af, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 1014755651}
@@ -4470,7 +4470,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: 97576fd7a4cbd9248b434c2462912976, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 1533156322}
@@ -4764,7 +4764,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: d80fa6b0e07377445ad7dae8a7a9805b, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 754718392}
@@ -4949,7 +4949,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: f0f4874f973fb8c45a112acc1729f079, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 421327127}
@@ -5134,7 +5134,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: b253452278e06834bbb235b9145b84c2, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 1092296835}
@@ -10542,7 +10542,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: a5e8edd8667183c448cea20ae952768a, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 1213846436}
@@ -11103,7 +11103,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: 97576fd7a4cbd9248b434c2462912976, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 2051214808}
@@ -12117,7 +12117,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: e36261fb182de2847a7817c3df34b6c4, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 710163634}
@@ -12377,7 +12377,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   targetImage: {fileID: 0}
-  infoSprite: {fileID: 21300000, guid: 61afba1b1f0aea44eb1488185a3611ea, type: 3}
+  infoSprite: {fileID: 21300000, guid: bf1b4a8f70b23a04483b2c91caee7cf5, type: 3}
   placeCardExtend: {fileID: 276171035}
   expandedScaleMultiplier: 2.2
   upgradeButton: {fileID: 885368542}

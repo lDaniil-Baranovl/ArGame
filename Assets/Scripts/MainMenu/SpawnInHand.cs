@@ -11,6 +11,10 @@ public class SpawnInHand : MonoBehaviour
     public float spawnDistance = 0.8f;
     public float spawnHeightOffset = -0.3f;
 
+    [Header("Точка спавна (если не задана — спавн от камеры игрока)")]
+    [Tooltip("Назначь Transform, расположенный перед канвасом в свободном месте. Сундук будет появляться от него, а не от камеры — это исключает появление сундука внутри/за канвасом.")]
+    public Transform spawnAnchor;
+
     private GameObject currentItem;
 
     private void Start()
@@ -53,12 +57,12 @@ public class SpawnInHand : MonoBehaviour
             Destroy(currentItem);
         }
 
-        // 4. спавним сундук перед игроком
-        Transform head = Camera.main.transform;
-        Vector3 spawnPos = head.position + head.forward * spawnDistance;
+        // 4. спавним сундук перед игроком (или от фиксированной точки, если она назначена)
+        Transform reference = spawnAnchor != null ? spawnAnchor : Camera.main.transform;
+        Vector3 spawnPos = reference.position + reference.forward * spawnDistance;
         spawnPos.y += spawnHeightOffset;
 
-        Quaternion spawnRot = Quaternion.LookRotation(head.forward, Vector3.up);
+        Quaternion spawnRot = Quaternion.LookRotation(reference.forward, Vector3.up);
 
         currentItem = Instantiate(itemPrefab, spawnPos, spawnRot);
 

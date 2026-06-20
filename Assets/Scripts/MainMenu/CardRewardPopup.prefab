@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   cardVisual: {fileID: 100024}
   amountText: {fileID: 100033}
+  cardAppearEffectPrefab: {fileID: 1652143759095011288, guid: e2c1ac940434a5242b54d72b66654687, type: 3}
+  cardAppearEffectScale: 0.3
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 0

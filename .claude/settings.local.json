@@ -40,7 +40,8 @@
       "Bash(awk '{print strtonum\\(\"0x\"$0\\) % 9000000000000000000 + 100000000000000000}')",
       "Bash(grep -rl \"00bbb7a2ed779dd43b8f69197dde4ff0\" --include=\"*.meta\" .)",
       "Bash(grep -rl \"619f75b476e6d6f47805575e317bdd36\" --include=\"*.meta\" .)",
-      "Bash(grep -rl \"e3a09dce7b50d214c91748528b5161e0\" --include=\"*.meta\" .)"
+      "Bash(grep -rl \"e3a09dce7b50d214c91748528b5161e0\" --include=\"*.meta\" .)",
+      "Bash(xargs grep -l \"ParticleSystem\")"
     ],
     "deny": [],
     "ask": [],

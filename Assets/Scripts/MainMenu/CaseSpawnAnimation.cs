@@ -14,6 +14,12 @@ public class CaseSpawnAnimation : MonoBehaviour
     public float floatHeight = 0.03f;
     public float floatSpeed = 1.5f;
 
+    [Header("Эффекты появления и вращения")]
+    public ParticleSystem appearEffectPrefab;
+    public float appearEffectScale = 0.3f;
+    public ParticleSystem spinEffectPrefab;
+    public float spinEffectScale = 0.7f;
+
     private Rigidbody rb;
     private XRGrabInteractable grab;
 
@@ -45,6 +51,19 @@ public class CaseSpawnAnimation : MonoBehaviour
     {
         Vector3 startPos = transform.position;
         Vector3 endPos = startPos + Vector3.down * descendDistance;
+
+        if (appearEffectPrefab != null)
+        {
+            ParticleSystem appearEffect = Instantiate(appearEffectPrefab, startPos, transform.rotation);
+            appearEffect.transform.localScale = Vector3.one * appearEffectScale;
+            Destroy(appearEffect.gameObject, duration);
+        }
+
+        if (spinEffectPrefab != null)
+        {
+            ParticleSystem spinEffect = Instantiate(spinEffectPrefab, transform.position, transform.rotation, transform);
+            spinEffect.transform.localScale = Vector3.one * spinEffectScale;
+        }
 
         float elapsed = 0f;
         while (elapsed < duration)

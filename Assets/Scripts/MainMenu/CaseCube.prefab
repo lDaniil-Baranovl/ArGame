@@ -33,8 +33,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -292,8 +292,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ea56fb17c612fc04ab6e31ea7fb95112, type: 2}
   rewardPopupPrefab: {fileID: 100002, guid: 8e4f1a2b3c5d6e7f8a9b0c1d2e3f4a5b, type: 3}
   popupDuration: 2
+  rewardSpawnDistance: 0.1
   minFragments: 3
   maxFragments: 10
+  openEffectPrefab1: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
+  openEffectScale1: 0.15
+  openEffectPrefab2: {fileID: 1559216468072176890, guid: c483142edbf33dc4d9014c13724a0175, type: 3}
+  openEffectScale2: 0.3
+  openEffectLifetime: 4
   leftTriggerAction:
     m_UseReference: 0
     m_Action:
@@ -351,3 +357,7 @@ MonoBehaviour:
   spinSpeed: 1440
   floatHeight: 0.03
   floatSpeed: 1.5
+  appearEffectPrefab: {fileID: 8724466350249207100, guid: 5ad33d58a66ab154a89c9e88255601e5, type: 3}
+  appearEffectScale: 0.3
+  spinEffectPrefab: {fileID: 6642199199589531581, guid: 354b6251e950209409c75ab984acf000, type: 3}
+  spinEffectScale: 0.7

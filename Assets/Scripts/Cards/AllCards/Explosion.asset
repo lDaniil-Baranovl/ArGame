@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Explosion
   icon: {fileID: 21300000, guid: 462b7f4489e51514eb59a1d966b94977, type: 3}
+  cardType: 1
+  spellType: 0
+  isFlying: 0
+  canTargetAir: 0
   prefabs:
   - {fileID: 2582212435168972547, guid: 713601897403f4143bd48e825aac9151, type: 3}
   elixirCost: 4

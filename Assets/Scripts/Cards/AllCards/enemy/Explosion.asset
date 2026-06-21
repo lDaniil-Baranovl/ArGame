@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Explosion
   icon: {fileID: 21300000, guid: 462b7f4489e51514eb59a1d966b94977, type: 3}
-  cardType: 0
+  cardType: 1
   spellType: 0
   isFlying: 0
   canTargetAir: 0

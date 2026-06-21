@@ -51,6 +51,7 @@ public class CaseSpawnAnimation : MonoBehaviour
     {
         Vector3 startPos = transform.position;
         Vector3 endPos = startPos + Vector3.down * descendDistance;
+        Quaternion faceRotation = transform.rotation;
 
         if (appearEffectPrefab != null)
         {
@@ -78,6 +79,7 @@ public class CaseSpawnAnimation : MonoBehaviour
         }
 
         transform.position = endPos;
+        transform.rotation = faceRotation;
         floatBasePosition = endPos;
         isFloating = true;
 

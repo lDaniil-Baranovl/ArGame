@@ -15,6 +15,9 @@ public class SpawnInHand : MonoBehaviour
     [Tooltip("Назначь Transform, расположенный перед канвасом в свободном месте. Сундук будет появляться от него, а не от камеры — это исключает появление сундука внутри/за канвасом.")]
     public Transform spawnAnchor;
 
+    [Tooltip("Коррекция разворота модели сундука по Y, если её визуальный 'фасад' не совпадает с осью forward префаба.")]
+    public float modelYawOffset = -90f;
+
     private GameObject currentItem;
 
     private void Start()
@@ -62,7 +65,7 @@ public class SpawnInHand : MonoBehaviour
         Vector3 spawnPos = reference.position + reference.forward * spawnDistance;
         spawnPos.y += spawnHeightOffset;
 
-        Quaternion spawnRot = Quaternion.LookRotation(reference.forward, Vector3.up);
+        Quaternion spawnRot = Quaternion.LookRotation(reference.forward, Vector3.up) * Quaternion.Euler(0f, modelYawOffset, 0f);
 
         currentItem = Instantiate(itemPrefab, spawnPos, spawnRot);
 

@@ -15,7 +15,7 @@ public static class SetupCinematicLoadingScene
     private const string ScenePath = "Assets/Scenes/CinematicLoading.unity";
     private const string XrOriginPrefabPath = "Assets/Samples/XR Interaction Toolkit/3.2.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab";
     private const string DragonPrefabPath = "Assets/PrfUnitFromCards/DragonFlyCold (3).prefab";
-    private const string TestMechanicSceneName = "testMechanic";
+    private const string BattleMatchSceneName = "BattleMatch";
 
     [MenuItem("Tools/ArGame/Setup Cinematic Loading Scene")]
     public static void Setup()
@@ -75,7 +75,7 @@ public static class SetupCinematicLoadingScene
         if (manager == null) manager = new GameObject("CinematicLoadingManager");
         var controller = manager.GetComponent<CinematicLoadingController>();
         if (controller == null) controller = manager.AddComponent<CinematicLoadingController>();
-        controller.nextSceneName = TestMechanicSceneName;
+        controller.nextSceneName = BattleMatchSceneName;
         controller.dragonFlight = flight;
 
         EnsureScenesInBuildSettings();
@@ -122,7 +122,7 @@ public static class SetupCinematicLoadingScene
     }
 
     // Камера рига по умолчанию рендерит с альфой 0 — это специально сделано
-    // для MR/passthrough сцен (testMechanic). Здесь альфа=0 означает, что
+    // для MR/passthrough сцен (BattleMatch). Здесь альфа=0 означает, что
     // компоновщик OpenXR показывает реальную комнату вместо виртуального фона.
     // Делаем альфу непрозрачной только для этого экземпляра рига, не трогая сам префаб.
     private static void ForceOpaqueVR(GameObject xrOrigin)

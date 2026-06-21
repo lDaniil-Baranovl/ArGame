@@ -48,7 +48,8 @@
       "Bash(awk 'NR==399492,NR==399700 {print NR\": \"$0}' \"d:/Git/ArGame/Assets/Scenes/CinematicLoading.unity\")",
       "Bash(grep -v \"\\\\.meta$\")",
       "Bash(grep -v \"\\\\.mat$\")",
-      "Bash(xargs -I{} basename {})"
+      "Bash(xargs -I{} basename {})",
+      "Bash(grep -n \"^--- !u!.* &6028483600987627041$\\\\|^--- !u!.* &2829223596326345133$\\\\|^--- !u!.* &2244461322403547193$\" \"Assets/Scenes/BattleMatch.unity\")"
     ],
     "deny": [],
     "ask": [],

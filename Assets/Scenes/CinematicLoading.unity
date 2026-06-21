@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76cbb0a71f9f26b4dafdfbcdf7ec1da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: testMechanic
+  nextSceneName: BattleMatch
   dragonFlight: {fileID: 684371429}
 --- !u!4 &1145653818
 Transform:

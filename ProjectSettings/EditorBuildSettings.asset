@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5c8a2627a3fcba94e8878339dbfe84cd
   - enabled: 1
-    path: Assets/Scenes/testMechanic.unity
+    path: Assets/Scenes/BattleMatch.unity
     guid: a3284fb7de17f124db76972652c41e55
   - enabled: 1
     path: Assets/Scenes/CinematicLoading.unity

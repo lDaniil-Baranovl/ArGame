@@ -324,8 +324,9 @@ MonoBehaviour:
   floatSpeed: 1.5
   appearEffectPrefab: {fileID: 8445763112410648400, guid: 45e0f06c750176947862c10346226439, type: 3}
   appearEffectScale: 0.19
+  appearEffectRotationOffset: {x: 0, y: 90, z: 0}
   spinEffectPrefab: {fileID: 6642199199589531581, guid: 354b6251e950209409c75ab984acf000, type: 3}
-  spinEffectScale: 0.7
+  spinEffectScale: 1.48
 --- !u!54 &8609436722839656084
 Rigidbody:
   m_ObjectHideFlags: 0

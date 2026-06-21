@@ -17,6 +17,7 @@ public class CaseSpawnAnimation : MonoBehaviour
     [Header("Эффекты появления и вращения")]
     public ParticleSystem appearEffectPrefab;
     public float appearEffectScale = 0.3f;
+    public Vector3 appearEffectRotationOffset = Vector3.zero;
     public ParticleSystem spinEffectPrefab;
     public float spinEffectScale = 0.7f;
 
@@ -55,7 +56,8 @@ public class CaseSpawnAnimation : MonoBehaviour
 
         if (appearEffectPrefab != null)
         {
-            ParticleSystem appearEffect = Instantiate(appearEffectPrefab, startPos, transform.rotation);
+            Quaternion appearRotation = transform.rotation * Quaternion.Euler(appearEffectRotationOffset);
+            ParticleSystem appearEffect = Instantiate(appearEffectPrefab, startPos, appearRotation);
             appearEffect.transform.localScale = Vector3.one * appearEffectScale;
             Destroy(appearEffect.gameObject, duration);
         }

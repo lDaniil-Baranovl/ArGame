@@ -5988,6 +5988,7 @@ MonoBehaviour:
   spawnDistance: 0.8
   spawnHeightOffset: 0.05
   spawnAnchor: {fileID: 1941261743}
+  modelYawOffset: -90
 --- !u!65 &737682123
 BoxCollider:
   m_ObjectHideFlags: 0

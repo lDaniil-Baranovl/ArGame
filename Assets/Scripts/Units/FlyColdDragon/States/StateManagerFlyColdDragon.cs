@@ -26,6 +26,13 @@ public class StateManagerFlyColdDragon : UnitStateManager
             navMeshAgent.enabled = false;
         }
 
+        // Состояния (DragFlyColdRunState и т.д.) сами полностью двигают/вращают transform.
+        // Root motion анимации конфликтует с этим и даёт дёрганье головой/шеей в полёте.
+        if (unitAnimator != null)
+        {
+            unitAnimator.applyRootMotion = false;
+        }
+
         attackEffect.SetActive(false);
         SwitchState(dragFlyColdRunState);
 

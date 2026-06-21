@@ -8,11 +8,11 @@ public class StartBattleButton : MonoBehaviour
     {
         if (DeckManager.Instance.selectedDeck.Count == 8)
         {
-            SceneManager.LoadScene("testMechanic");
+            SceneManager.LoadScene("CinematicLoading");
         }
         else
         {
-            Debug.Log("Нужно выбрать ровно 8 карт.");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 8 пїЅпїЅпїЅпїЅ.");
         }
     }
 }

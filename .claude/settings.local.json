@@ -41,7 +41,14 @@
       "Bash(grep -rl \"00bbb7a2ed779dd43b8f69197dde4ff0\" --include=\"*.meta\" .)",
       "Bash(grep -rl \"619f75b476e6d6f47805575e317bdd36\" --include=\"*.meta\" .)",
       "Bash(grep -rl \"e3a09dce7b50d214c91748528b5161e0\" --include=\"*.meta\" .)",
-      "Bash(xargs grep -l \"ParticleSystem\")"
+      "Bash(xargs grep -l \"ParticleSystem\")",
+      "Bash(xargs grep -l \"Transform.*Lerp\\\\|Vector3.*Lerp\\\\|MoveTowards\\\\|Patrol\\\\|Follow\")",
+      "Bash(xargs grep -l \"waypoint\\\\|Waypoint\\\\|patrol\\\\|Patrol\")",
+      "Bash(git -C \"d:/Git/ArGame\" status --short Assets/Scenes/CinematicLoading.unity)",
+      "Bash(awk 'NR==399492,NR==399700 {print NR\": \"$0}' \"d:/Git/ArGame/Assets/Scenes/CinematicLoading.unity\")",
+      "Bash(grep -v \"\\\\.meta$\")",
+      "Bash(grep -v \"\\\\.mat$\")",
+      "Bash(xargs -I{} basename {})"
     ],
     "deny": [],
     "ask": [],

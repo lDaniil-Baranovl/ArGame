@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class StartBattleButton : MonoBehaviour
 {
@@ -8,7 +7,7 @@ public class StartBattleButton : MonoBehaviour
     {
         if (DeckManager.Instance.selectedDeck.Count == 8)
         {
-            SceneManager.LoadScene("CinematicLoading");
+            ScreenFader.LoadScene("CinematicLoading");
         }
         else
         {

@@ -2924,7 +2924,14 @@ ModelImporter:
           preInfinity: 3
           postInfinity: 3
           rotationOrder: 0
-      events: []
+      events:
+      - time: 0.6820225
+        functionName: jumpDRG
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

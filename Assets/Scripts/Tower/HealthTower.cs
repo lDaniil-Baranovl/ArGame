@@ -1,20 +1,19 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class HealthTower : MonoBehaviour
 {
-    [Header("Настройки здоровья башни")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]
     public int tower_maxHealth = 1000;
     public int tower_currentHealth;
 
-    [Header("Объект Башни")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]
     public GameObject tower;
-    [Header("Пост - Башни")]
+    [Header("пїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅ")]
     public GameObject tower_ruines;
     [SerializeField] public GameObject effectBroken1;
     [SerializeField] public GameObject effectBroken2;
 
-    // 0 = синие, 1 = красные
+    // 0 = пїЅпїЅпїЅпїЅпїЅ, 1 = пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField] private int teamID;
     void Start()
     {
@@ -30,7 +29,7 @@ public class HealthTower : MonoBehaviour
     {
         tower_currentHealth -= damageAmount;
         tower_currentHealth = Mathf.Clamp(tower_currentHealth, 0, tower_maxHealth);
-        Debug.Log($"Башня получила урон {damageAmount} Текущее здороье {tower_currentHealth}");
+        Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ {damageAmount} пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ {tower_currentHealth}");
         TowerBarHealth healthBar = GetComponentInChildren<TowerBarHealth>();
         if (healthBar != null)
             healthBar.UpdateHealthBarTower();
@@ -58,7 +57,7 @@ public class HealthTower : MonoBehaviour
     }
     public void OnDamageDetected(int damageAmount)
     {
-        Debug.Log($"[DamageDetector] Получен урон: {damageAmount}");
+        Debug.Log($"[DamageDetector] пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: {damageAmount}");
         Tower_ApplyDamage(damageAmount);
     }
     public int GetTeam()
@@ -72,6 +71,6 @@ public class HealthTower : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        ScreenFader.LoadScene("MainMenu");
     }
 }

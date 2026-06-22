@@ -58,6 +58,9 @@ public class LoadingScreenController : MonoBehaviour
         while (loadOp.progress < 0.9f)
             yield return null;
 
+        if (ScreenFader.Instance != null)
+            yield return ScreenFader.Instance.FadeOut();
+
         loadOp.allowSceneActivation = true;
     }
 

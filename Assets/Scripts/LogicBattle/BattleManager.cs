@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
@@ -191,6 +190,6 @@ public class BattleManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         GamePause.paused = false;
-        SceneManager.LoadScene("MainMenu");
+        ScreenFader.LoadScene("MainMenu");
     }
 }

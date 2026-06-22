@@ -167275,8 +167275,11 @@ MonoBehaviour:
   damagePerTick: 10
   tickRate: 1
   teamID: 0
-  laser: {fileID: 4638255457042204796}
-  laserOrigin: {fileID: 7517423996520272896}
+  projectilePrefab: {fileID: 7045889733438899885, guid: 14078f8f7064d894fad9a68275c46f31, type: 3}
+  impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
+  projectileOrigin: {fileID: 7517423996520272896}
+  projectileSpeed: 6
+  minTravelTime: 0.8
 --- !u!136 &3686979439577513615
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -251709,8 +251712,11 @@ MonoBehaviour:
   damagePerTick: 10
   tickRate: 1
   teamID: 0
-  laser: {fileID: 4638255457042204796}
-  laserOrigin: {fileID: 7899054730135873103}
+  projectilePrefab: {fileID: 7045889733438899885, guid: 14078f8f7064d894fad9a68275c46f31, type: 3}
+  impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
+  projectileOrigin: {fileID: 7899054730135873103}
+  projectileSpeed: 6
+  minTravelTime: 0.8
 --- !u!136 &2177844372020708164
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -338144,8 +338150,11 @@ MonoBehaviour:
   damagePerTick: 10
   tickRate: 1
   teamID: 1
-  laser: {fileID: 4638255457042204796}
-  laserOrigin: {fileID: 4117183351962989633}
+  projectilePrefab: {fileID: 4718697377525663345, guid: 0d3a2dc2176fee345b9d92ac7a089808, type: 3}
+  impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
+  projectileOrigin: {fileID: 4117183351962989633}
+  projectileSpeed: 6
+  minTravelTime: 0.8
 --- !u!136 &8824382677541149031
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -360172,8 +360181,11 @@ MonoBehaviour:
   damagePerTick: 10
   tickRate: 1
   teamID: 1
-  laser: {fileID: 4638255457042204796}
-  laserOrigin: {fileID: 2222911600401092921}
+  projectilePrefab: {fileID: 4718697377525663345, guid: 0d3a2dc2176fee345b9d92ac7a089808, type: 3}
+  impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
+  projectileOrigin: {fileID: 2222911600401092921}
+  projectileSpeed: 6
+  minTravelTime: 0.8
 --- !u!136 &4187710000629433729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -374876,8 +374888,11 @@ MonoBehaviour:
   damagePerTick: 10
   tickRate: 1
   teamID: 0
-  laser: {fileID: 4638255457042204796}
-  laserOrigin: {fileID: 8010218535369795188}
+  projectilePrefab: {fileID: 7045889733438899885, guid: 14078f8f7064d894fad9a68275c46f31, type: 3}
+  impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
+  projectileOrigin: {fileID: 8010218535369795188}
+  projectileSpeed: 6
+  minTravelTime: 0.8
 --- !u!136 &1686604612186068876
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -388307,8 +388322,11 @@ MonoBehaviour:
   damagePerTick: 10
   tickRate: 1
   teamID: 1
-  laser: {fileID: 4638255457042204796}
-  laserOrigin: {fileID: 9062104624640212708}
+  projectilePrefab: {fileID: 4718697377525663345, guid: 0d3a2dc2176fee345b9d92ac7a089808, type: 3}
+  impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
+  projectileOrigin: {fileID: 9062104624640212708}
+  projectileSpeed: 6
+  minTravelTime: 0.8
 --- !u!136 &8413622717845278717
 CapsuleCollider:
   m_ObjectHideFlags: 0

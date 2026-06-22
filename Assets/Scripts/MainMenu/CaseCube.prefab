@@ -146,7 +146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1db0aa452d4fec94d97934ea62571b60, type: 3}
   m_Name: 
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d2e7f1a9c3b4e6d8f0a1b2c3d4e5f6a, type: 3}
   m_Name: 
@@ -359,5 +359,6 @@ MonoBehaviour:
   floatSpeed: 1.5
   appearEffectPrefab: {fileID: 8724466350249207100, guid: 5ad33d58a66ab154a89c9e88255601e5, type: 3}
   appearEffectScale: 0.3
+  appearEffectRotationOffset: {x: 0, y: 0, z: 0}
   spinEffectPrefab: {fileID: 6642199199589531581, guid: 354b6251e950209409c75ab984acf000, type: 3}
   spinEffectScale: 0.7

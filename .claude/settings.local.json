@@ -49,7 +49,9 @@
       "Bash(grep -v \"\\\\.meta$\")",
       "Bash(grep -v \"\\\\.mat$\")",
       "Bash(xargs -I{} basename {})",
-      "Bash(grep -n \"^--- !u!.* &6028483600987627041$\\\\|^--- !u!.* &2829223596326345133$\\\\|^--- !u!.* &2244461322403547193$\" \"Assets/Scenes/BattleMatch.unity\")"
+      "Bash(grep -n \"^--- !u!.* &6028483600987627041$\\\\|^--- !u!.* &2829223596326345133$\\\\|^--- !u!.* &2244461322403547193$\" \"Assets/Scenes/BattleMatch.unity\")",
+      "Bash(xargs grep -l \"Magic effects pack\\\\|Cartoon FX Remaster\")",
+      "Bash(python assign_tower_vfx.py)"
     ],
     "deny": [],
     "ask": [],

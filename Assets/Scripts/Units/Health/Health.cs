@@ -28,13 +28,15 @@ public class Health : MonoBehaviour
         if (CurrentHealth <= 0) return;
 
         CurrentHealth -= damage;
-        Debug.Log($"{gameObject.name} получил {damage} урона от {damageSource}. Здоровье: {CurrentHealth}");
+        Debug.Log($"{gameObject.name} пїЅпїЅпїЅпїЅпїЅпїЅпїЅ {damage} пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ {damageSource}. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: {CurrentHealth}");
 
         if (healthBar != null)
             healthBar.UpdateHealthBar();
 
         if (CurrentHealth <= 0)
         {
+            IsDead = true;
+
             if (healthBar != null)
                 healthBar.OnUnitDeath();
 

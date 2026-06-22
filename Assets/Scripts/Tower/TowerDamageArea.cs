@@ -11,9 +11,16 @@ public class TowerSingleTargetDamage : MonoBehaviour
     [Header("Team Settings")]
     public int teamID = 1;
 
-    [Header("Laser Settings")]
-    public LineRenderer laser;
-    public Transform laserOrigin;
+    [Header("Projectile Settings")]
+    public GameObject projectilePrefab;
+    public GameObject impactEffectPrefab;
+    public Transform projectileOrigin;
+    public float projectileSpeed = 6f;
+    public float minTravelTime = 0.8f;
+    public float projectileScale = 0.25f;
+    public float arcHeight = 2f;
+    public float impactScale = 0.4f;
+    public float impactEffectLifetime = 2f;
 
     private readonly List<Health> unitsInRange = new List<Health>();
     private Health currentTarget;
@@ -21,31 +28,8 @@ public class TowerSingleTargetDamage : MonoBehaviour
 
     private void Start()
     {
-        if (laser == null)
-        {
-            laser = gameObject.AddComponent<LineRenderer>();
-            laser.startWidth = 0.08f;
-            laser.endWidth = 0.08f;
-            laser.enabled = false;
-        }
-
-        if (laserOrigin == null)
-            laserOrigin = transform;
-    }
-
-    private void Update()
-    {
-        if (currentTarget != null && !currentTarget.IsDead)
-        {
-            laser.enabled = true;
-
-            laser.SetPosition(0, laserOrigin.position);
-            laser.SetPosition(1, currentTarget.transform.position + Vector3.up * 0.5f);
-        }
-        else
-        {
-            laser.enabled = false;
-        }
+        if (projectileOrigin == null)
+            projectileOrigin = transform;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -94,8 +78,6 @@ public class TowerSingleTargetDamage : MonoBehaviour
                 StopCoroutine(attackRoutine);
                 attackRoutine = null;
             }
-
-            laser.enabled = false;
         }
     }
 
@@ -129,9 +111,26 @@ public class TowerSingleTargetDamage : MonoBehaviour
                 yield break;
             }
 
-            currentTarget.ApplyDamage(Mathf.RoundToInt(damagePerTick), "Tower");
+            FireProjectile(currentTarget);
             yield return new WaitForSeconds(tickRate);
-            //fixx
         }
+    }
+
+    private void FireProjectile(Health target)
+    {
+        GameObject projectileObj = projectilePrefab != null
+            ? Instantiate(projectilePrefab, projectileOrigin.position, Quaternion.identity)
+            : GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
+        if (projectilePrefab == null)
+            projectileObj.transform.SetPositionAndRotation(projectileOrigin.position, Quaternion.identity);
+
+        projectileObj.transform.localScale = Vector3.one * projectileScale;
+
+        TowerProjectile projectile = projectileObj.GetComponent<TowerProjectile>();
+        if (projectile == null)
+            projectile = projectileObj.AddComponent<TowerProjectile>();
+
+        projectile.Init(target, Mathf.RoundToInt(damagePerTick), projectileSpeed, minTravelTime, arcHeight, impactEffectPrefab, impactScale, impactEffectLifetime);
     }
 }

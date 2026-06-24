@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8a18f68fd7cbc1a439a968696e569606
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303479
+  packageName: Zap VFX - URP
+  packageVersion: 1.0.3
+  assetPath: Assets/Vefects/Zap VFX URP/Demo/Resources/Shaders/SH_Vefects_URP_VFX_Character_Showoff.shader
+  uploadId: 778923

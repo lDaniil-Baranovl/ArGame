@@ -135760,6 +135760,8 @@ MonoBehaviour:
   teamID: 1
   projectilePrefab: {fileID: 4718697377525663345, guid: 0d3a2dc2176fee345b9d92ac7a089808, type: 3}
   impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
+  zapEffectPrefab: {fileID: 5627696518775099638, guid: 00dd6efc06d3d904f8c54712b85f5042, type: 3}
+  zapEffectScale: 0.25
   projectileOrigin: {fileID: 7761609599553785210}
   projectileSpeed: 6
   minTravelTime: 0.8
@@ -167901,6 +167903,8 @@ MonoBehaviour:
   teamID: 1
   projectilePrefab: {fileID: 4718697377525663345, guid: 0d3a2dc2176fee345b9d92ac7a089808, type: 3}
   impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
+  zapEffectPrefab: {fileID: 5627696518775099638, guid: 00dd6efc06d3d904f8c54712b85f5042, type: 3}
+  zapEffectScale: 0.25
   projectileOrigin: {fileID: 5503807137108634297}
   projectileSpeed: 6
   minTravelTime: 0.8
@@ -239913,6 +239917,8 @@ MonoBehaviour:
   teamID: 1
   projectilePrefab: {fileID: 4718697377525663345, guid: 0d3a2dc2176fee345b9d92ac7a089808, type: 3}
   impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
+  zapEffectPrefab: {fileID: 5627696518775099638, guid: 00dd6efc06d3d904f8c54712b85f5042, type: 3}
+  zapEffectScale: 0.25
   projectileOrigin: {fileID: 5401400931156162628}
   projectileSpeed: 6
   minTravelTime: 0.8
@@ -305889,6 +305895,8 @@ MonoBehaviour:
   teamID: 0
   projectilePrefab: {fileID: 7045889733438899885, guid: 14078f8f7064d894fad9a68275c46f31, type: 3}
   impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
+  zapEffectPrefab: {fileID: 5627696518775099638, guid: 390cc74915d4a054bbd897e1885047a4, type: 3}
+  zapEffectScale: 0.25
   projectileOrigin: {fileID: 0}
   projectileSpeed: 6
   minTravelTime: 0.8
@@ -323916,6 +323924,8 @@ MonoBehaviour:
   teamID: 0
   projectilePrefab: {fileID: 7045889733438899885, guid: 14078f8f7064d894fad9a68275c46f31, type: 3}
   impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
+  zapEffectPrefab: {fileID: 5627696518775099638, guid: 390cc74915d4a054bbd897e1885047a4, type: 3}
+  zapEffectScale: 0.25
   projectileOrigin: {fileID: 0}
   projectileSpeed: 6
   minTravelTime: 0.8
@@ -414842,6 +414852,8 @@ MonoBehaviour:
   teamID: 0
   projectilePrefab: {fileID: 7045889733438899885, guid: 14078f8f7064d894fad9a68275c46f31, type: 3}
   impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
+  zapEffectPrefab: {fileID: 5627696518775099638, guid: 390cc74915d4a054bbd897e1885047a4, type: 3}
+  zapEffectScale: 0.25
   projectileOrigin: {fileID: 0}
   projectileSpeed: 6
   minTravelTime: 0.8

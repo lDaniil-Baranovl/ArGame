@@ -11,26 +11,16 @@ public class TowerSingleTargetDamage : MonoBehaviour
     [Header("Team Settings")]
     public int teamID = 1;
 
-    [Header("Projectile Settings")]
-    public GameObject projectilePrefab;
+    [Header("Impact Effect Settings")]
     public GameObject impactEffectPrefab;
-    public Transform projectileOrigin;
-    public float projectileSpeed = 6f;
-    public float minTravelTime = 0.8f;
-    public float projectileScale = 0.25f;
-    public float arcHeight = 2f;
+    public GameObject zapEffectPrefab;
     public float impactScale = 0.4f;
+    public float zapEffectScale = 0.25f;
     public float impactEffectLifetime = 2f;
 
     private readonly List<Health> unitsInRange = new List<Health>();
     private Health currentTarget;
     private Coroutine attackRoutine;
-
-    private void Start()
-    {
-        if (projectileOrigin == null)
-            projectileOrigin = transform;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -111,26 +101,50 @@ public class TowerSingleTargetDamage : MonoBehaviour
                 yield break;
             }
 
-            FireProjectile(currentTarget);
+            Attack(currentTarget);
             yield return new WaitForSeconds(tickRate);
         }
     }
 
-    private void FireProjectile(Health target)
+    private void Attack(Health target)
     {
-        GameObject projectileObj = projectilePrefab != null
-            ? Instantiate(projectilePrefab, projectileOrigin.position, Quaternion.identity)
-            : GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        if (target == null || target.IsDead)
+            return;
 
-        if (projectilePrefab == null)
-            projectileObj.transform.SetPositionAndRotation(projectileOrigin.position, Quaternion.identity);
+        target.ApplyDamage(Mathf.RoundToInt(damagePerTick), "Tower");
 
-        projectileObj.transform.localScale = Vector3.one * projectileScale;
+        Vector3 targetPoint = target.transform.position + Vector3.up * 0.5f;
+        SpawnImpactEffect(impactEffectPrefab, targetPoint, impactScale);
+        SpawnImpactEffect(zapEffectPrefab, GetGroundPosition(targetPoint), zapEffectScale);
+    }
 
-        TowerProjectile projectile = projectileObj.GetComponent<TowerProjectile>();
-        if (projectile == null)
-            projectile = projectileObj.AddComponent<TowerProjectile>();
+    private Vector3 GetGroundPosition(Vector3 origin)
+    {
+        int battleFieldLayer = LayerMask.NameToLayer("BattleField");
+        if (battleFieldLayer >= 0)
+        {
+            Vector3 rayOrigin = origin + Vector3.up * 10f;
+            if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, 50f, 1 << battleFieldLayer))
+                return hit.point;
+        }
 
-        projectile.Init(target, Mathf.RoundToInt(damagePerTick), projectileSpeed, minTravelTime, arcHeight, impactEffectPrefab, impactScale, impactEffectLifetime);
+        return origin;
+    }
+
+    private void SpawnImpactEffect(GameObject prefab, Vector3 position, float scale)
+    {
+        if (prefab == null)
+            return;
+
+        GameObject impact = Instantiate(prefab, position, Quaternion.identity);
+        impact.transform.localScale = Vector3.one * scale;
+
+        foreach (var ps in impact.GetComponentsInChildren<ParticleSystem>())
+        {
+            var main = ps.main;
+            main.loop = false;
+        }
+
+        Destroy(impact, impactEffectLifetime);
     }
 }

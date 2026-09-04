@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &41344535605146001
 GameObject:
@@ -29486,7 +29486,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4945096110922842560}
-  - component: {fileID: 7849509499929427851}
   - component: {fileID: 8983977040171632400}
   - component: {fileID: 4734391021007070358}
   - component: {fileID: 3290720726807864626}
@@ -29527,31 +29526,6 @@ Transform:
   - {fileID: 8586677480984199489}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0.045, y: 0, z: 0.342}
---- !u!143 &7849509499929427851
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8660280716068717265}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1.64
-  m_Radius: 0.62
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!95 &8983977040171632400
 Animator:
   serializedVersion: 7

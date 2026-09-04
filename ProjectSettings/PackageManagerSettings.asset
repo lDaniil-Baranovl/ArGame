@@ -18,7 +18,7 @@ MonoBehaviour:
   m_SeeAllPackageVersions: 0
   m_DismissPreviewPackagesInUse: 0
   oneTimeWarningShown: 0
-  oneTimeDeprecatedPopUpShown: 0
+  oneTimeDeprecatedPopUpShown: 1
   m_Registries:
   - m_Id: main
     m_Name: 
@@ -27,6 +27,9 @@ MonoBehaviour:
     m_IsDefault: 1
     m_Capabilities: 7
     m_ConfigSource: 0
+    m_Compliance:
+      m_Status: 0
+      m_Violations: []
   - m_Id: scoped:project:Meta
     m_Name: Meta
     m_Url: https://npm.developer.oculus.com
@@ -35,6 +38,9 @@ MonoBehaviour:
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4
+    m_Compliance:
+      m_Status: 0
+      m_Violations: []
   m_UserSelectedRegistryName: Meta
   m_UserAddingNewScopedRegistry: 0
   m_RegistryInfoDraft:

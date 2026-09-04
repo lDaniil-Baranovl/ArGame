@@ -7,7 +7,7 @@ public class StartBattleButton : MonoBehaviour
     {
         if (DeckManager.Instance.selectedDeck.Count == 8)
         {
-            ScreenFader.LoadScene("CinematicLoading");
+            ScreenFader.LoadScene("BattleMatch");
         }
         else
         {

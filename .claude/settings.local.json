@@ -51,7 +51,17 @@
       "Bash(xargs -I{} basename {})",
       "Bash(grep -n \"^--- !u!.* &6028483600987627041$\\\\|^--- !u!.* &2829223596326345133$\\\\|^--- !u!.* &2244461322403547193$\" \"Assets/Scenes/BattleMatch.unity\")",
       "Bash(xargs grep -l \"Magic effects pack\\\\|Cartoon FX Remaster\")",
-      "Bash(python assign_tower_vfx.py)"
+      "Bash(python assign_tower_vfx.py)",
+      "WebSearch",
+      "Bash(awk '/^--- !u!4 &/{anchor=$0} /m_GameObject: {fileID: 135620}/{print anchor; print}' \"Assets/Unitss/Centaur/Centaur/Prefabs/Centaur.prefab\")",
+      "PowerShell(Get-MpPreference)",
+      "Bash(grep -rn -B3 \"propertyPath: m_Height$\" Assets --include=\"*.unity\" --include=\"*.prefab\")",
+      "Bash(grep -B3 \"m_Height$\")",
+      "Bash(grep -rn -B3 \"propertyPath: m_Radius$\" Assets --include=\"*.unity\" --include=\"*.prefab\")",
+      "Bash(grep -B3 \"m_Radius$\")",
+      "Bash(awk '/^--- !u!4 &/{anchor=$0} /m_GameObject: {fileID: 8660280716068717265}/{print anchor; print}' \"Assets/PrfUnitFromCards/Centaur \\(1\\).prefab\")",
+      "Bash(awk '/^--- !u!1 &/{anchor=$0} /^GameObject:/{getline; if \\($0 ~ /m_ObjectHideFlags/\\) {}} {buf[NR]=$0} END{}' \"Assets/Scripts/Cards/AllCards/enemy/Centaur \\(1\\).prefab\")",
+      "Bash(grep -n \"2850150646667717323\\\\|7849509499929427851\\\\|14307310$\\\\|1447541721\\\\|1284424618562508561\" \"Assets/Scripts/Cards/AllCards/enemy/Centaur \\(1\\).prefab\" \"Assets/PrfUnitFromCards/Centaur \\(1\\).prefab\" \"Assets/Unitss/Centaur/Centaur/Prefabs/Centaur.prefab\" \"Assets/Scenes/BattleMatch.unity\")"
     ],
     "deny": [],
     "ask": [],

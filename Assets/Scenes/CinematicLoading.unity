@@ -477,19 +477,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9068281059075228377, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Target
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 9173983156334026967, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5167925059111895691, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
     - {fileID: 5944131804917401860, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -1146,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -167356,14 +167353,8 @@ MonoBehaviour:
   damagePerTick: 20
   tickRate: 1
   teamID: 1
-  projectilePrefab: {fileID: 0}
   impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
   zapEffectPrefab: {fileID: 5627696518775099638, guid: 00dd6efc06d3d904f8c54712b85f5042, type: 3}
-  projectileOrigin: {fileID: 3334540730132868180}
-  projectileSpeed: 20
-  minTravelTime: 0.8
-  projectileScale: 0.25
-  arcHeight: 2
   impactScale: 0.18
   zapEffectScale: 0.09
   impactEffectLifetime: 2
@@ -263310,14 +263301,8 @@ MonoBehaviour:
   damagePerTick: 20
   tickRate: 1
   teamID: 1
-  projectilePrefab: {fileID: 0}
   impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
   zapEffectPrefab: {fileID: 5627696518775099638, guid: 00dd6efc06d3d904f8c54712b85f5042, type: 3}
-  projectileOrigin: {fileID: 689365756853406615}
-  projectileSpeed: 20
-  minTravelTime: 0.8
-  projectileScale: 0.25
-  arcHeight: 2
   impactScale: 0.18
   zapEffectScale: 0.09
   impactEffectLifetime: 2
@@ -337367,14 +337352,8 @@ MonoBehaviour:
   damagePerTick: 20
   tickRate: 1
   teamID: 0
-  projectilePrefab: {fileID: 0}
   impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
   zapEffectPrefab: {fileID: 5627696518775099638, guid: 390cc74915d4a054bbd897e1885047a4, type: 3}
-  projectileOrigin: {fileID: 0}
-  projectileSpeed: 20
-  minTravelTime: 0.8
-  projectileScale: 0.25
-  arcHeight: 2
   impactScale: 0.18
   zapEffectScale: 0.09
   impactEffectLifetime: 2
@@ -361102,14 +361081,8 @@ MonoBehaviour:
   damagePerTick: 20
   tickRate: 1
   teamID: 0
-  projectilePrefab: {fileID: 0}
   impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
   zapEffectPrefab: {fileID: 5627696518775099638, guid: 390cc74915d4a054bbd897e1885047a4, type: 3}
-  projectileOrigin: {fileID: 0}
-  projectileSpeed: 20
-  minTravelTime: 0.8
-  projectileScale: 0.25
-  arcHeight: 2
   impactScale: 0.18
   zapEffectScale: 0.09
   impactEffectLifetime: 2
@@ -363467,14 +363440,8 @@ MonoBehaviour:
   damagePerTick: 20
   tickRate: 1
   teamID: 0
-  projectilePrefab: {fileID: 0}
   impactEffectPrefab: {fileID: 952961124639765284, guid: 1095a5c9f65bfbe4383f63d5d1886c65, type: 3}
   zapEffectPrefab: {fileID: 5627696518775099638, guid: 390cc74915d4a054bbd897e1885047a4, type: 3}
-  projectileOrigin: {fileID: 0}
-  projectileSpeed: 20
-  minTravelTime: 0.8
-  projectileScale: 0.25
-  arcHeight: 2
   impactScale: 0.18
   zapEffectScale: 0.09
   impactEffectLifetime: 2
@@ -388449,14 +388416,8 @@ MonoBehaviour:
   damagePerTick: 20
   tickRate: 1
   teamID: 1
-  projectilePrefab: {fileID: 0}
   impactEffectPrefab: {fileID: 5435998012328932994, guid: d8703a33a4eb0b84a875202fde23e8f7, type: 3}
   zapEffectPrefab: {fileID: 5627696518775099638, guid: 00dd6efc06d3d904f8c54712b85f5042, type: 3}
-  projectileOrigin: {fileID: 1082496040168888682}
-  projectileSpeed: 20
-  minTravelTime: 0.8
-  projectileScale: 0.25
-  arcHeight: 2
   impactScale: 0.18
   zapEffectScale: 0.09
   impactEffectLifetime: 2
